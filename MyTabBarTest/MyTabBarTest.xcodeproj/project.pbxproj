@@ -22,6 +22,7 @@
 		E61FACE8207AE696001319F1 /* FourViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E61FACE7207AE696001319F1 /* FourViewController.m */; };
 		E61FACEB207AE69F001319F1 /* FiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E61FACEA207AE69F001319F1 /* FiveViewController.m */; };
 		E61FACEE207AEEAF001319F1 /* OnePushViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E61FACED207AEEAF001319F1 /* OnePushViewController.m */; };
+		E61FACF1207B0490001319F1 /* BaseNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E61FACF0207B0490001319F1 /* BaseNavigationViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,8 @@
 		E61FACEA207AE69F001319F1 /* FiveViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FiveViewController.m; sourceTree = "<group>"; };
 		E61FACEC207AEEAF001319F1 /* OnePushViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OnePushViewController.h; sourceTree = "<group>"; };
 		E61FACED207AEEAF001319F1 /* OnePushViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OnePushViewController.m; sourceTree = "<group>"; };
+		E61FACEF207B0490001319F1 /* BaseNavigationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseNavigationViewController.h; sourceTree = "<group>"; };
+		E61FACF0207B0490001319F1 /* BaseNavigationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +112,8 @@
 				E61FACDA207A18BF001319F1 /* UIRootItem.m */,
 				E61FACD3207A1382001319F1 /* BaseViewController.h */,
 				E61FACD4207A1382001319F1 /* BaseViewController.m */,
+				E61FACEF207B0490001319F1 /* BaseNavigationViewController.h */,
+				E61FACF0207B0490001319F1 /* BaseNavigationViewController.m */,
 				E61FACBD207A131A001319F1 /* ViewController.h */,
 				E61FACBE207A131A001319F1 /* ViewController.m */,
 				E61FACC3207A131A001319F1 /* Assets.xcassets */,
@@ -205,6 +210,7 @@
 				E61FACBC207A131A001319F1 /* AppDelegate.m in Sources */,
 				E61FACE2207AE67D001319F1 /* TwoViewController.m in Sources */,
 				E61FACDB207A18BF001319F1 /* UIRootItem.m in Sources */,
+				E61FACF1207B0490001319F1 /* BaseNavigationViewController.m in Sources */,
 				E61FACDF207AE672001319F1 /* OneViewController.m in Sources */,
 				E61FACE8207AE696001319F1 /* FourViewController.m in Sources */,
 				E61FACE5207AE689001319F1 /* ThreeViewController.m in Sources */,

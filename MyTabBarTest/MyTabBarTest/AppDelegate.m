@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "UIRootViewController.h"
+#import "BaseNavigationViewController.h"
 
 @interface AppDelegate ()
 
@@ -19,7 +20,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     UIWindow *keyWindow = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:[UIRootViewController sharedRoot]];
+    BaseNavigationViewController *nav = [[BaseNavigationViewController alloc] initWithRootViewController:[UIRootViewController sharedRoot]];
     keyWindow.rootViewController = nav;
     self.window = keyWindow;
     [self.window makeKeyAndVisible];

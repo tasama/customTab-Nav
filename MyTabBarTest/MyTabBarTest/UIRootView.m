@@ -50,7 +50,7 @@
     self.effectView.frame = self.bounds;
     CGFloat width = self.bounds.size.width;
     CGFloat itemWidth = width / (_items.count);
-    CGFloat itemHeight = self.bounds.size.height;
+    CGFloat itemHeight = 49.0f;
     [_items enumerateObjectsUsingBlock:^(UIRootItem * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
        
         obj.tag = idx;

@@ -18,8 +18,11 @@
 
 @end
 
+#define IS_IPHONE_X (kScreenHeight == 812.0f)
 #define kScreenWidth [UIScreen mainScreen].bounds.size.width
 #define kScreenHeight [UIScreen mainScreen].bounds.size.height
+#define NAV_HEIGHT IS_IPHONE_X ? 88 : 64
+#define STA_HEIGHT IS_IPHONE_X ? 44 : 20
 
 @implementation BaseViewController
 
@@ -39,10 +42,9 @@
 - (void)viewDidLayoutSubviews {
     
     [super viewDidLayoutSubviews];
-    
-    self.navigationBar.frame = CGRectMake(0, 0, self.view.bounds.size.width, 64);
-    self.backBtn.frame = CGRectMake(0, 20, 44, 44);
-    self.titleLabel.frame = CGRectMake(44, 20, kScreenWidth - 88, 44.0f);
+    CGFloat navHeight =  NAV_HEIGHT;
+    self.backBtn.frame = CGRectMake(0, STA_HEIGHT, 44, 44);
+    self.titleLabel.frame = CGRectMake(44, STA_HEIGHT, kScreenWidth - 88, 44.0f);
 }
 
 - (void)setBackBtnImage {
@@ -69,14 +71,14 @@
         CGFloat top = 0;
         if (hide) {
             
-            top = - 64.0f;
+            top = - (NAV_HEIGHT);
         } else {
             
             top = 0;
         }
         [UIView animateWithDuration:.25f animations:^{
            
-            self.navigationBar.frame = CGRectMake(0, top, kScreenWidth, 64.0f);
+            self.navigationBar.frame = CGRectMake(0, top, kScreenWidth, NAV_HEIGHT);
         }];
     } else {
         
@@ -113,6 +115,7 @@
     if (!_navigationBar) {
         
         _navigationBar = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"nav_bg"]];
+        _navigationBar.frame = CGRectMake(0, 0, kScreenWidth, NAV_HEIGHT);
         _navigationBar.contentMode = UIViewContentModeScaleAspectFill;
         _navigationBar.clipsToBounds = YES;
         _navigationBar.userInteractionEnabled = YES;

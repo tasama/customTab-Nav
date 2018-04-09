@@ -26,8 +26,10 @@
 
 @end
 
+#define IS_IPHONE_X (kScreenHeight == 812.0f)
 #define kScreenWidth [UIScreen mainScreen].bounds.size.width
 #define kScreenHeight [UIScreen mainScreen].bounds.size.height
+#define TAB_HEIGHT (IS_IPHONE_X) ? 83 : 49
 
 @implementation UIRootViewController
 
@@ -120,11 +122,11 @@
             top = kScreenHeight;
         } else {
             
-            top = kScreenHeight - 49.0f;
+            top = kScreenHeight - (TAB_HEIGHT);
         }
         [UIView animateWithDuration:.25f animations:^{
             
-            self.rootView.frame = CGRectMake(0, top, kScreenWidth, 49.0f);
+            self.rootView.frame = CGRectMake(0, top, kScreenWidth, TAB_HEIGHT);
         }];
         
     } else {
@@ -188,7 +190,10 @@
         
         _rootView = [[UIRootView alloc] initWithItems:_items];
         _rootView.delegate = self;
-        _rootView.frame = CGRectMake(0, self.view.bounds.size.height - 49.0f, self.view.bounds.size.width, 49.0f);
+        CGFloat height = kScreenHeight;
+        CGFloat tabHeight = TAB_HEIGHT;
+        NSLog(@"%.2lf, %.2lf", height, tabHeight);
+        _rootView.frame = CGRectMake(0, kScreenHeight - (TAB_HEIGHT), kScreenWidth, TAB_HEIGHT);
     }
     return _rootView;
 }
