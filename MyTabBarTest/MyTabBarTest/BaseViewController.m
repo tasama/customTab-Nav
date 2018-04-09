@@ -42,7 +42,6 @@
 - (void)viewDidLayoutSubviews {
     
     [super viewDidLayoutSubviews];
-    CGFloat navHeight =  NAV_HEIGHT;
     self.backBtn.frame = CGRectMake(0, STA_HEIGHT, 44, 44);
     self.titleLabel.frame = CGRectMake(44, STA_HEIGHT, kScreenWidth - 88, 44.0f);
 }
